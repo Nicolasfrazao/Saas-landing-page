@@ -1,6 +1,5 @@
 'use client'
 
-import { Link as LinkScroll } from "react-scroll";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import Image from "next/image";
@@ -22,7 +21,7 @@ const Header = () => {
   }, []);
 
   const NavLink = ({ title }) => (
-    <LinkScroll
+    <div
       onClick={() => setIsOpen(false)}
       to={title}
       offset={-100}
@@ -32,7 +31,7 @@ const Header = () => {
       className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5"
     >
       {title}
-    </LinkScroll>
+    </div>
   );
 
   return (
@@ -63,7 +62,7 @@ const Header = () => {
                 </li>
 
                 <li className="nav-logo">
-                  <LinkScroll
+                  <div
                     to="hero"
                     offset={-250}
                     spy
@@ -78,7 +77,7 @@ const Header = () => {
                       height={55}
                       alt="logo"
                     />
-                  </LinkScroll>
+                  </div>
                 </li>
 
                 <li className="nav-li">
