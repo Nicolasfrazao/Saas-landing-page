@@ -1,11 +1,11 @@
-import { Element } from "react-scroll";
-import { links, logos } from "../constants/index.jsx";
-import { Marker } from "../components/Marker.jsx";
+import { links, logos } from "../constants/index";
+import { Marker } from "../components/Marker";
+import Image from "next/image";
 
 const Download = () => {
   return (
     <section>
-      <Element
+      <div
         name="download"
         className="g7 relative pb-32 pt-24 max-lg:pb-24 max-md:py-16"
       >
@@ -13,7 +13,7 @@ const Download = () => {
           <div className="flex items-center">
             <div className="relative mr-6 flex-540 max-xl:flex-280 max-lg:flex256 max-md:flex-100">
               <div className="mb-10">
-                <img
+                <Image
                   src="/images/xora.svg"
                   width={160}
                   height={55}
@@ -58,7 +58,7 @@ const Download = () => {
                   <span className="download_preview-dot left-11 bg-s3" />
                   <span className="download_preview-dot left-16 bg-p1/15" />
 
-                  <img
+                  <Image
                     src="/images/screen.jpg"
                     width={855}
                     height={655}
@@ -73,12 +73,12 @@ const Download = () => {
           <ul className="mt-24 flex justify-center max-lg:hidden">
             {logos.map(({ id, url, width, height, title }) => (
               <li key={id} className="mx-10">
-                <img src={url} width={width} height={height} alt={title} />
+                <Image src={url} width={width} height={height} alt={title} />
               </li>
             ))}
           </ul>
         </div>
-      </Element>
+      </div>
     </section>
   );
 };

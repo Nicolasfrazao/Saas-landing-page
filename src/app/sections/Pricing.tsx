@@ -1,9 +1,12 @@
+'use client'
+
 import { Element } from "react-scroll";
 import { useState } from "react";
 import clsx from "clsx";
 import CountUp from "react-countup";
-import { plans } from "../constants/index.jsx";
-import Button from "../components/Button.jsx";
+import { plans } from "../constants/index";
+import Button from "../components/Button";
+import Image from "next/image";
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
@@ -40,14 +43,14 @@ const Pricing = () => {
             </div>
 
             <div className="pricing-bg">
-              <img
+              <Image
                 src="/images/bg-outlines.svg"
                 width={960}
                 height={380}
                 alt="outline"
                 className="relative z-2"
               />
-              <img
+              <Image
                 src="/images/bg-outlines-fill.png"
                 width={960}
                 height={380}

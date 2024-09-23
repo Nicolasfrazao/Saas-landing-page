@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { Marker } from "./Marker";
+import {Marker} from "./Marker";
 
 const Button = ({
   icon,
