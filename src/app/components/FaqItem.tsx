@@ -2,7 +2,6 @@
 
 import clsx from "clsx";
 import { useState } from "react";
-import "react-slidedown/lib/slidedown.css";
 
 const FaqItem = ({ item, index }) => {
   const [activeId, setActiveId] = useState(null);
@@ -60,4 +59,5 @@ const FaqItem = ({ item, index }) => {
     </div>
   );
 };
+
 export default FaqItem;
